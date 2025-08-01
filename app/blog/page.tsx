@@ -46,11 +46,11 @@ export default function BlogPage() {
   ]
 
   return (
-    <main className="min-h-screen bg-[#F8F5F3] pt-24">
+    <main className="min-h-screen bg-white pt-24">
       {/* Hero Section */}
-      <section className="relative py-20 bg-[#2C1810] overflow-hidden">
-        <div className="absolute inset-0 bg-[#2C1810]">
-          <div className="absolute inset-0 bg-gradient-to-r from-[#2C1810] to-transparent"></div>
+      <section className="relative py-20 bg-gradient-to-br from-[#F7941E] to-[#004E8F] overflow-hidden">
+        <div className="absolute inset-0">
+          <div className="absolute inset-0 bg-gradient-to-r from-[#F7941E] via-[#004E8F] to-transparent"></div>
           <img
             src="/images/business-meeting.jpg"
             alt="Business insights"
@@ -86,7 +86,7 @@ export default function BlogPage() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
               >
-                <Card className="overflow-hidden group hover:shadow-xl transition-all duration-300 border border-[#E5DCD3] hover:border-[#2C1810]">
+                <Card className="overflow-hidden group hover:shadow-xl transition-all duration-300 border border-[#F7941E]/20 hover:border-[#004E8F] backdrop-blur-sm">
                   <div className="relative h-48 overflow-hidden">
                     <img
                       src={post.image}
@@ -94,13 +94,13 @@ export default function BlogPage() {
                       className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
                     />
                     <div className="absolute top-4 left-4">
-                      <span className="bg-white/90 backdrop-blur-sm text-[#2C1810] px-3 py-1 rounded-full text-sm font-medium">
+                      <span className="bg-white/90 backdrop-blur-sm text-[#F7941E] px-3 py-1 rounded-full text-sm font-medium">
                         {post.category}
                       </span>
                     </div>
                   </div>
                   <div className="p-6">
-                    <div className="flex items-center space-x-4 text-sm text-[#4A3427] mb-4">
+                    <div className="flex items-center space-x-4 text-sm text-[#004E8F]/70 mb-4">
                       <div className="flex items-center">
                         <Calendar className="h-4 w-4 mr-1" />
                         {post.date}
@@ -110,20 +110,20 @@ export default function BlogPage() {
                         {post.readTime}
                       </div>
                     </div>
-                    <h3 className="text-xl font-semibold text-[#2C1810] mb-3 group-hover:translate-x-1 transition-transform duration-300">
+                    <h3 className="text-xl font-semibold text-[#004E8F] mb-3 group-hover:text-[#F7941E] group-hover:translate-x-1 transition-all duration-300">
                       {post.title}
                     </h3>
-                    <p className="text-[#4A3427] mb-4">
+                    <p className="text-[#004E8F]/70 mb-4">
                       {post.excerpt}
                     </p>
                     <div className="flex items-center justify-between">
-                      <div className="flex items-center text-sm text-[#4A3427]">
+                      <div className="flex items-center text-sm text-[#004E8F]/70">
                         <User className="h-4 w-4 mr-1" />
                         {post.author}
                       </div>
                       <Button 
                         variant="outline"
-                        className="border-[#2C1810] text-[#2C1810] hover:bg-[#2C1810] hover:text-white transition-all duration-300 group"
+                        className="btn btn-outline font-semibold group"
                       >
                         Read More
                         <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
@@ -147,21 +147,21 @@ export default function BlogPage() {
             viewport={{ once: true }}
             className="max-w-3xl mx-auto text-center"
           >
-            <h2 className="text-4xl font-bold text-[#2C1810] mb-4">
+            <h2 className="text-4xl font-bold text-[#004E8F] mb-4">
               Subscribe to Our Newsletter
             </h2>
-            <p className="text-lg text-[#4A3427] mb-8">
+            <p className="text-lg text-[#F7941E] mb-8">
               Get the latest insights and updates delivered directly to your inbox
             </p>
             <div className="flex gap-4 max-w-md mx-auto">
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="flex-1 px-4 py-2 rounded-lg border border-[#E5DCD3] focus:border-[#2C1810] focus:outline-none"
+                className="flex-1 px-4 py-2 rounded-lg border border-[#F7941E]/20 focus:border-[#004E8F] hover:border-[#F7941E] transition-colors focus:outline-none"
               />
-              <Button 
-                className="bg-[#2C1810] text-white hover:bg-[#4A3427] transition-all duration-300 transform hover:scale-105 active:scale-95"
-              >
+                              <Button
+                  className="btn btn-primary font-semibold"
+                >
                 Subscribe
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Button>

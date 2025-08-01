@@ -30,7 +30,7 @@ export function AboutSection() {
   ]
 
   return (
-    <section className="py-20 bg-[#F8F5F3]">
+    <section className="py-20 bg-white">
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left Content */}
@@ -42,17 +42,17 @@ export function AboutSection() {
             className="space-y-8"
           >
             <div className="space-y-6">
-              <h2 className="text-4xl font-bold text-[#2C1810]">
+              <h2 className="text-4xl font-bold text-[#004E8F]">
                 About Our Company
               </h2>
-              <p className="text-lg text-[#4A3427] leading-relaxed">
+              <p className="text-lg text-[#004E8F]/70 leading-relaxed">
                 MPE,BE Ziyanda Solutions is a leading South African financial services firm dedicated to empowering businesses through expert accounting, taxation, and B-BBEE services. As a 100% black women-owned company, we bring a unique perspective and deep understanding of the local business landscape.
               </p>
-              <p className="text-lg text-[#4A3427] leading-relaxed">
+              <p className="text-lg text-[#004E8F]/70 leading-relaxed">
                 Our team of qualified professionals combines industry expertise with personalized attention to help your business thrive in today's competitive environment.
               </p>
-              <Button 
-                className="bg-[#2C1810] text-white hover:bg-[#4A3427] transition-all duration-300 transform hover:scale-105 active:scale-95 shadow-md hover:shadow-lg"
+                            <Button
+                className="btn btn-primary font-semibold"
               >
                 Learn More About Us
                 <ArrowRight className="ml-2 h-5 w-5" />
@@ -74,12 +74,12 @@ export function AboutSection() {
                 alt="Our team at work"
                 className="w-full h-[500px] object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-tr from-[#2C1810]/20 to-transparent"></div>
+              <div className="absolute inset-0 bg-gradient-to-tr from-[#F7941E]/20 via-[#004E8F]/20 to-transparent"></div>
             </div>
             <div className="absolute -bottom-6 -left-6">
               <div className="bg-white p-4 rounded-xl shadow-xl">
-                <div className="text-[#2C1810] font-bold text-4xl">15+</div>
-                <div className="text-[#4A3427]">Years Experience</div>
+                <div className="text-[#004E8F] font-bold text-4xl">15+</div>
+                <div className="text-[#F7941E]">Years Experience</div>
               </div>
             </div>
           </motion.div>
@@ -94,8 +94,8 @@ export function AboutSection() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold text-[#2C1810] mb-4">Our Core Values</h2>
-            <p className="text-lg text-[#4A3427] max-w-3xl mx-auto">
+            <h2 className="text-4xl font-bold text-[#004E8F] mb-4">Our Core Values</h2>
+            <p className="text-lg text-[#F7941E] max-w-3xl mx-auto">
               These principles guide our work and shape our relationships with clients
             </p>
           </motion.div>
@@ -109,14 +109,14 @@ export function AboutSection() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
                 >
-                <Card className="p-6 bg-white border border-[#E5DCD3] hover:border-[#2C1810] transition-all duration-300 hover:shadow-xl group">
-                  <div className="w-12 h-12 bg-[#2C1810] rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                <Card className="p-6 bg-white border border-[#F7941E]/20 hover:border-[#004E8F] transition-all duration-300 hover:shadow-xl group backdrop-blur-sm">
+                  <div className="w-12 h-12 bg-gradient-to-br from-[#F7941E] to-[#004E8F] rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
                     <value.icon className="h-6 w-6 text-white" />
                   </div>
-                  <h3 className="text-xl font-semibold text-[#2C1810] mb-3 group-hover:translate-x-1 transition-transform duration-300">
+                  <h3 className="text-xl font-semibold text-[#004E8F] mb-3 group-hover:text-[#F7941E] transition-all duration-300">
                     {value.title}
                   </h3>
-                  <p className="text-[#4A3427] leading-relaxed">
+                  <p className="text-[#004E8F]/70 leading-relaxed">
                     {value.description}
                   </p>
                 </Card>

@@ -6,11 +6,11 @@ import { ArrowRight } from "lucide-react"
 
 export function HeroSection() {
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden bg-[#F8F5F3]">
+    <section className="relative min-h-screen flex items-center overflow-hidden bg-white">
       {/* Background Elements */}
       <div className="absolute inset-0 z-0">
-        <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-gradient-to-br from-[#2C1810]/20 to-[#4A3427]/20 rounded-full blur-3xl opacity-50 transform -translate-x-1/2 translate-y-1/2"></div>
-        <div className="absolute top-0 right-0 w-[300px] h-[300px] bg-gradient-to-br from-[#4A3427]/20 to-[#2C1810]/20 rounded-full blur-3xl opacity-30"></div>
+        <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-gradient-to-br from-[#F7941E]/20 to-[#004E8F]/20 rounded-full blur-3xl opacity-50 transform -translate-x-1/2 translate-y-1/2"></div>
+        <div className="absolute top-0 right-0 w-[300px] h-[300px] bg-gradient-to-br from-[#004E8F]/20 to-[#F7941E]/20 rounded-full blur-3xl opacity-30"></div>
       </div>
 
       <div className="container mx-auto px-4 relative z-10 pt-20">
@@ -27,7 +27,7 @@ export function HeroSection() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
-                className="text-5xl lg:text-6xl font-bold text-[#2C1810] leading-tight"
+                className="text-5xl lg:text-6xl font-bold text-[#004E8F] leading-tight"
               >
                 Strategic Financial Solutions
               </motion.h1>
@@ -36,7 +36,7 @@ export function HeroSection() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
-                className="text-3xl font-light text-[#4A3427]"
+                className="text-3xl font-light text-[#F7941E]"
               >
                 Supercharge your growth
               </motion.div>
@@ -45,7 +45,7 @@ export function HeroSection() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.3 }}
-                className="text-lg text-[#4A3427] leading-relaxed max-w-2xl"
+                className="text-lg text-[#004E8F]/80 leading-relaxed max-w-2xl"
               >
                 Mphemba Ziyanda Solutions (Pty) Ltd is a 100% black women-owned South African company providing comprehensive Accounting, Tax, Payroll, and B-BBEE advisory services. Our goal is to support businesses in achieving financial clarity, regulatory compliance, and economic transformation in line with South Africa's national development goals.
               </motion.p>
@@ -58,7 +58,7 @@ export function HeroSection() {
             >
               <Button
                 size="lg"
-                  className="bg-[#2C1810] text-white hover:bg-[#4A3427] transition-all duration-300 transform hover:scale-105 active:scale-95 shadow-md hover:shadow-lg px-8 py-6 text-lg rounded-lg"
+                  className="btn btn-primary px-8 py-6 text-lg font-semibold group relative overflow-hidden"
                 >
                   Book a Call
                   <ArrowRight className="ml-2 h-5 w-5" />
@@ -89,12 +89,12 @@ export function HeroSection() {
                     clipPath: "polygon(0 0, 100% 0, 100% 85%, 85% 100%, 0 100%)"
                   }}
                 />
-                <div className="absolute inset-0 rounded-[2rem] shadow-inner bg-gradient-to-tr from-[#2C1810]/10 to-transparent"></div>
+                <div className="absolute inset-0 rounded-[2rem] shadow-inner bg-gradient-to-tr from-[#F7941E]/20 via-[#004E8F]/20 to-transparent"></div>
                         </motion.div>
               <div className="absolute top-0 right-0 -mr-4 -mt-4">
                 <div className="flex space-x-1">
                   {[...Array(3)].map((_, i) => (
-                    <div key={i} className="w-2 h-2 bg-[#2C1810] rounded-full" />
+                    <div key={i} className="w-2 h-2 bg-gradient-to-br from-[#F7941E] to-[#004E8F] rounded-full" />
                   ))}
                 </div>
               </div>
@@ -109,7 +109,7 @@ export function HeroSection() {
           {[...Array(5)].map((_, i) => (
             <motion.div 
               key={i} 
-              className="w-2 h-2 bg-[#4A3427] rounded-full opacity-50"
+              className="w-2 h-2 bg-gradient-to-br from-[#F7941E] to-[#004E8F] rounded-full opacity-50"
               initial={{ scale: 0 }}
               animate={{ scale: 1 }}
               transition={{ delay: i * 0.1 + 0.5 }}

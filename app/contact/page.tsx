@@ -111,7 +111,7 @@ export default function ContactPage() {
   return (
     <div className="pt-20">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-tobacco-brown via-zorba to-natural-gray text-white py-20">
+      <section className="bg-gradient-to-br from-[#F7941E] to-[#004E8F] text-white py-20">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -128,7 +128,7 @@ export default function ContactPage() {
       </section>
 
       {/* Contact Form & Info */}
-      <section className="py-20 bg-pampas">
+      <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-3 gap-12">
             {/* Contact Form */}
@@ -139,40 +139,40 @@ export default function ContactPage() {
                 transition={{ duration: 0.8 }}
                 viewport={{ once: true }}
               >
-                <Card className="shadow-xl bg-white border-0">
+                <Card className="shadow-xl bg-white border border-[#F7941E]/20 hover:border-[#004E8F] transition-all duration-300 backdrop-blur-sm">
                   <CardHeader>
-                    <CardTitle className="text-2xl flex items-center text-tobacco-brown">
-                      <MessageSquare className="h-6 w-6 mr-2 text-tobacco-brown" />
+                    <CardTitle className="text-2xl flex items-center text-[#004E8F]">
+                      <MessageSquare className="h-6 w-6 mr-2 text-[#F7941E]" />
                       Send us a message
                     </CardTitle>
                   </CardHeader>
                   <CardContent className="space-y-6">
                     <div className="grid md:grid-cols-2 gap-4">
                       <div className="space-y-2">
-                        <Label htmlFor="firstName">First Name *</Label>
-                        <Input id="firstName" placeholder="Enter your first name" />
+                        <Label htmlFor="firstName" className="text-[#004E8F] font-medium">First Name *</Label>
+                        <Input id="firstName" placeholder="Enter your first name" className="border-[#F7941E]/20 focus:border-[#004E8F] hover:border-[#F7941E] transition-colors bg-white/80 focus:bg-white" />
                       </div>
                       <div className="space-y-2">
-                        <Label htmlFor="lastName">Last Name *</Label>
-                        <Input id="lastName" placeholder="Enter your last name" />
+                        <Label htmlFor="lastName" className="text-[#004E8F] font-medium">Last Name *</Label>
+                        <Input id="lastName" placeholder="Enter your last name" className="border-[#F7941E]/20 focus:border-[#004E8F] hover:border-[#F7941E] transition-colors bg-white/80 focus:bg-white" />
                       </div>
                     </div>
                     <div className="grid md:grid-cols-2 gap-4">
                       <div className="space-y-2">
-                        <Label htmlFor="email">Email *</Label>
-                        <Input id="email" type="email" placeholder="Enter your email" />
+                        <Label htmlFor="email" className="text-[#004E8F] font-medium">Email *</Label>
+                        <Input id="email" type="email" placeholder="Enter your email" className="border-[#F7941E]/20 focus:border-[#004E8F] hover:border-[#F7941E] transition-colors bg-white/80 focus:bg-white" />
                       </div>
                       <div className="space-y-2">
-                        <Label htmlFor="phone">Phone</Label>
-                        <Input id="phone" placeholder="Enter your phone number" />
+                        <Label htmlFor="phone" className="text-[#004E8F] font-medium">Phone</Label>
+                        <Input id="phone" placeholder="Enter your phone number" className="border-[#F7941E]/20 focus:border-[#004E8F] hover:border-[#F7941E] transition-colors bg-white/80 focus:bg-white" />
                       </div>
                     </div>
                     <div className="space-y-2">
-                      <Label htmlFor="company">Company</Label>
-                      <Input id="company" placeholder="Enter your company name" />
+                      <Label htmlFor="company" className="text-[#004E8F] font-medium">Company</Label>
+                      <Input id="company" placeholder="Enter your company name" className="border-[#F7941E]/20 focus:border-[#004E8F] hover:border-[#F7941E] transition-colors bg-white/80 focus:bg-white" />
                     </div>
                     <div className="space-y-2">
-                      <Label htmlFor="service">Service Interest</Label>
+                      <Label htmlFor="service" className="text-[#004E8F] font-medium">Service Interest</Label>
                       <Select>
                         <SelectTrigger>
                           <SelectValue placeholder="Select a service" />
@@ -187,10 +187,10 @@ export default function ContactPage() {
                       </Select>
                     </div>
                     <div className="space-y-2">
-                      <Label htmlFor="message">Message *</Label>
-                      <Textarea id="message" placeholder="Tell us about your needs..." className="min-h-[120px]" />
+                      <Label htmlFor="message" className="text-[#004E8F] font-medium">Message *</Label>
+                      <Textarea id="message" placeholder="Tell us about your needs..." className="min-h-[120px] border-[#F7941E]/20 focus:border-[#004E8F] hover:border-[#F7941E] transition-colors bg-white/80 focus:bg-white" />
                     </div>
-                    <Button className="w-full bg-tobacco-brown hover:bg-zorba button-hover text-lg py-3">
+                    <Button className="btn btn-primary w-full font-semibold text-lg py-3">
                       Send Message
                     </Button>
                   </CardContent>
@@ -208,22 +208,22 @@ export default function ContactPage() {
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
                 >
-                  <Card className="card-hover bg-white border-0 shadow-lg">
+                  <Card className="card-hover bg-white border border-[#F7941E]/20 hover:border-[#004E8F] transition-all duration-300 hover:shadow-xl backdrop-blur-sm">
                     <CardContent className="p-6">
                       <div className="flex items-start space-x-4">
-                        <div className="w-12 h-12 bg-tobacco-brown/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                          <info.icon className="h-6 w-6 text-tobacco-brown" />
+                        <div className="w-12 h-12 bg-gradient-to-br from-[#F7941E] to-[#004E8F] rounded-lg flex items-center justify-center flex-shrink-0">
+                          <info.icon className="h-6 w-6 text-white" />
                         </div>
                         <div>
-                          <h3 className="font-semibold text-tobacco-brown mb-1">{info.title}</h3>
+                          <h3 className="font-semibold text-[#004E8F] mb-1">{info.title}</h3>
                           <div className="space-y-1">
                             {info.details.map((detail, detailIndex) => (
-                              <div key={detailIndex} className="text-natural-gray">
+                              <div key={detailIndex} className="text-[#004E8F]/70">
                                 {detail}
                               </div>
                             ))}
                           </div>
-                          <p className="text-sm text-natural-gray/70 mt-2">{info.description}</p>
+                          <p className="text-sm text-[#004E8F]/70/70 mt-2">{info.description}</p>
                         </div>
                       </div>
                     </CardContent>
@@ -238,7 +238,7 @@ export default function ContactPage() {
                 transition={{ duration: 0.8, delay: 0.4 }}
                 viewport={{ once: true }}
               >
-                <Card className="bg-gradient-to-br from-tobacco-brown to-zorba text-white border-0 shadow-lg">
+                <Card className="bg-gradient-to-br from-[#F7941E] to-[#004E8F] text-white border-0 shadow-lg">
                   <CardContent className="p-6">
                     <div className="flex items-center mb-4">
                       <Calendar className="h-6 w-6 mr-2" />
@@ -247,7 +247,7 @@ export default function ContactPage() {
                     <p className="text-white/90 mb-4">
                       Schedule a free consultation to discuss your business needs and how we can help.
                     </p>
-                    <Button className="w-full bg-white text-tobacco-brown hover:bg-pampas button-hover">
+                    <Button className="w-full bg-white text-[#F7941E] hover:text-[#004E8F] transition-all duration-300 transform hover:scale-[1.02] active:scale-[0.98]">
                       Book Consultation
                     </Button>
                   </CardContent>
@@ -268,8 +268,8 @@ export default function ContactPage() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold text-tobacco-brown mb-4">Our Offices</h2>
-            <p className="text-xl text-natural-gray max-w-3xl mx-auto">
+            <h2 className="text-4xl font-bold text-[#004E8F] mb-4">Our Offices</h2>
+            <p className="text-xl text-[#004E8F]/70 max-w-3xl mx-auto">
               Visit us at any of our convenient locations across South Africa.
             </p>
           </motion.div>
@@ -283,7 +283,7 @@ export default function ContactPage() {
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
               >
-                <Card className="overflow-hidden card-hover bg-white border-0 shadow-lg">
+                <Card className="overflow-hidden card-hover bg-white border border-[#F7941E]/20 hover:border-[#004E8F] transition-all duration-300 hover:shadow-xl backdrop-blur-sm">
                   <div className="relative h-48 overflow-hidden">
                     <img
                       src={office.image}
@@ -292,23 +292,23 @@ export default function ContactPage() {
                     />
                   </div>
                   <CardContent className="p-6">
-                    <h3 className="text-xl font-semibold text-tobacco-brown mb-4">{office.city}</h3>
+                    <h3 className="text-xl font-semibold text-[#004E8F] mb-4">{office.city}</h3>
                     <div className="space-y-3">
                       <div className="flex items-start space-x-3">
-                        <MapPin className="h-4 w-4 text-tobacco-brown mt-1 flex-shrink-0" />
-                        <span className="text-natural-gray text-sm">{office.address}</span>
+                        <MapPin className="h-4 w-4 text-[#F7941E] mt-1 flex-shrink-0" />
+                        <span className="text-[#004E8F]/70 text-sm">{office.address}</span>
                       </div>
                       <div className="flex items-center space-x-3">
-                        <Phone className="h-4 w-4 text-tobacco-brown flex-shrink-0" />
-                        <span className="text-natural-gray text-sm">{office.phone}</span>
+                        <Phone className="h-4 w-4 text-[#F7941E] flex-shrink-0" />
+                        <span className="text-[#004E8F]/70 text-sm">{office.phone}</span>
                       </div>
                       <div className="flex items-center space-x-3">
-                        <Mail className="h-4 w-4 text-tobacco-brown flex-shrink-0" />
-                        <span className="text-natural-gray text-sm">{office.email}</span>
+                        <Mail className="h-4 w-4 text-[#F7941E] flex-shrink-0" />
+                        <span className="text-[#004E8F]/70 text-sm">{office.email}</span>
                       </div>
-                      <div className="pt-2 border-t border-pampas">
-                        <p className="text-sm text-natural-gray/70">
-                          Office Manager: <span className="font-medium text-tobacco-brown">{office.manager}</span>
+                      <div className="pt-2 border-t border-[#F7941E]/20">
+                        <p className="text-sm text-[#004E8F]/70">
+                          Office Manager: <span className="font-medium text-[#004E8F]">{office.manager}</span>
                         </p>
                       </div>
                     </div>
@@ -321,7 +321,7 @@ export default function ContactPage() {
       </section>
 
       {/* Industries We Serve */}
-      <section className="py-20 bg-pampas">
+      <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -330,8 +330,8 @@ export default function ContactPage() {
             viewport={{ once: true }}
             className="text-center mb-12"
           >
-            <h2 className="text-4xl font-bold text-tobacco-brown mb-4">Industries We Serve</h2>
-            <p className="text-xl text-natural-gray">
+            <h2 className="text-4xl font-bold text-[#004E8F] mb-4">Industries We Serve</h2>
+            <p className="text-xl text-[#004E8F]/70">
               Our expertise spans across multiple industries, providing specialized solutions for each sector.
             </p>
           </motion.div>
@@ -347,8 +347,8 @@ export default function ContactPage() {
                 className="bg-white rounded-lg p-6 shadow-lg hover:shadow-xl transition-shadow"
               >
                 <div className="flex items-center space-x-3">
-                  <CheckCircle className="h-5 w-5 text-tobacco-brown" />
-                  <span className="text-natural-gray">{industry}</span>
+                  <CheckCircle className="h-5 w-5 text-[#F7941E]" />
+                  <span className="text-[#004E8F]/70">{industry}</span>
                 </div>
               </motion.div>
             ))}
@@ -366,8 +366,8 @@ export default function ContactPage() {
             viewport={{ once: true }}
             className="text-center mb-12"
           >
-            <h2 className="text-4xl font-bold text-tobacco-brown mb-4">Our Compliance & Memberships</h2>
-            <div className="max-w-3xl mx-auto space-y-4 text-natural-gray">
+            <h2 className="text-4xl font-bold text-[#004E8F] mb-4">Our Compliance & Memberships</h2>
+            <div className="max-w-3xl mx-auto space-y-4 text-[#004E8F]/70">
               <p>✓ Registered with SARS and CIPC</p>
               <p>✓ B-BBEE Compliant (Level 1)</p>
               <p>✓ Professional Memberships: SAICA</p>

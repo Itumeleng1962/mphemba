@@ -45,7 +45,7 @@ export function TeamSection() {
   ]
 
   return (
-    <section className="py-20 bg-pampas">
+    <section className="py-20 bg-white">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -54,8 +54,8 @@ export function TeamSection() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-5xl font-bold text-tobacco-brown mb-6">Meet Our Team</h2>
-          <p className="text-xl text-natural-gray max-w-4xl mx-auto leading-relaxed">
+          <h2 className="text-5xl font-bold text-[#004E8F] mb-6">Meet Our Team</h2>
+          <p className="text-xl text-[#F7941E] max-w-4xl mx-auto leading-relaxed">
             Our experienced professionals are dedicated to providing exceptional service and expertise to help your business thrive.
           </p>
         </motion.div>
@@ -69,7 +69,7 @@ export function TeamSection() {
               transition={{ duration: 0.8, delay: index * 0.1 }}
               viewport={{ once: true }}
             >
-              <Card className="card-hover bg-white border-0 shadow-lg overflow-hidden">
+              <Card className="card-hover bg-white border border-[#F7941E]/20 hover:border-[#004E8F] transition-all duration-300 hover:shadow-xl backdrop-blur-sm overflow-hidden group">
                 <div className="relative aspect-square overflow-hidden">
                   <img
                     src={member.image}
@@ -78,15 +78,15 @@ export function TeamSection() {
                   />
                 </div>
                 <CardHeader className="text-center pb-2">
-                  <h3 className="text-xl font-bold text-tobacco-brown">{member.name}</h3>
-                  <p className="text-natural-gray font-medium">{member.role}</p>
+                  <h3 className="text-xl font-bold text-[#004E8F] group-hover:text-[#F7941E] transition-colors duration-300">{member.name}</h3>
+                  <p className="text-[#004E8F]/70 font-medium">{member.role}</p>
                 </CardHeader>
                 <CardContent className="space-y-4">
-                  <p className="text-sm text-natural-gray text-center">{member.description}</p>
+                  <p className="text-sm text-[#004E8F]/70 text-center">{member.description}</p>
                   <div className="flex justify-center space-x-4">
                     <a
                       href={member.linkedin}
-                      className="text-tobacco-brown hover:text-zorba transition-colors"
+                      className="text-[#F7941E] hover:text-[#004E8F] hover:scale-110 transition-all duration-300"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
@@ -94,13 +94,13 @@ export function TeamSection() {
                     </a>
                     <a
                       href={`mailto:${member.email}`}
-                      className="text-tobacco-brown hover:text-zorba transition-colors"
+                      className="text-[#F7941E] hover:text-[#004E8F] hover:scale-110 transition-all duration-300"
                     >
                       <Mail className="h-5 w-5" />
                     </a>
                     <a
                       href={`tel:${member.phone}`}
-                      className="text-tobacco-brown hover:text-zorba transition-colors"
+                      className="text-[#F7941E] hover:text-[#004E8F] hover:scale-110 transition-all duration-300"
                     >
                       <Phone className="h-5 w-5" />
                     </a>

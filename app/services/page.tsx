@@ -95,7 +95,7 @@ export default function ServicesPage() {
   return (
     <div className="pt-20">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-tobacco-brown via-zorba to-natural-gray text-white py-20">
+      <section className="bg-gradient-to-br from-[#F7941E] to-[#004E8F] text-white py-20">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -113,7 +113,7 @@ export default function ServicesPage() {
       </section>
 
       {/* Services Grid */}
-      <section className="py-20 bg-pampas">
+      <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12">
             {services.map((service, index) => (
@@ -124,7 +124,7 @@ export default function ServicesPage() {
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
               >
-                <Card className="h-full card-hover overflow-hidden bg-white border-0 shadow-lg">
+                <Card className="h-full card-hover overflow-hidden bg-white border border-[#F7941E]/20 hover:border-[#004E8F] transition-all duration-300 hover:shadow-xl backdrop-blur-sm">
                   <div className="relative h-48 overflow-hidden">
                     <img
                       src={service.image || "/placeholder.svg"}
@@ -132,18 +132,18 @@ export default function ServicesPage() {
                       className="w-full h-full object-cover image-hover"
                     />
                     <div className="absolute top-4 left-4">
-                      <div className="w-12 h-12 bg-white/90 backdrop-blur-sm rounded-lg flex items-center justify-center">
-                        <service.icon className="h-6 w-6 text-tobacco-brown" />
+                      <div className="w-12 h-12 bg-gradient-to-br from-[#F7941E] to-[#004E8F] rounded-lg flex items-center justify-center">
+                        <service.icon className="h-6 w-6 text-white" />
                       </div>
                     </div>
                   </div>
                   <CardHeader>
                     <div className="flex justify-between items-start">
                       <div>
-                        <CardTitle className="text-xl mb-2 text-tobacco-brown">{service.title}</CardTitle>
-                        <CardDescription className="text-natural-gray">{service.description}</CardDescription>
+                        <CardTitle className="text-xl mb-2 text-[#004E8F] group-hover:text-[#F7941E] transition-colors duration-300">{service.title}</CardTitle>
+                        <CardDescription className="text-[#004E8F]/70">{service.description}</CardDescription>
                       </div>
-                      <Badge variant="secondary" className="bg-tobacco-brown/10 text-tobacco-brown">
+                      <Badge variant="secondary" className="bg-[#F7941E]/10 text-[#F7941E]">
                         {service.pricing}
                       </Badge>
                     </div>
@@ -151,13 +151,13 @@ export default function ServicesPage() {
                   <CardContent className="space-y-4">
                     <ul className="space-y-2">
                       {service.features.map((feature, featureIndex) => (
-                        <li key={featureIndex} className="flex items-start text-sm text-natural-gray">
-                          <CheckCircle className="h-4 w-4 text-tobacco-brown mr-3 mt-0.5 flex-shrink-0" />
+                        <li key={featureIndex} className="flex items-start text-sm text-[#004E8F]/70">
+                          <CheckCircle className="h-4 w-4 text-[#F7941E] mr-3 mt-0.5 flex-shrink-0" />
                           {feature}
                         </li>
                       ))}
                     </ul>
-                    <Button className="w-full bg-tobacco-brown hover:bg-zorba button-hover group text-white">
+                    <Button className="btn btn-primary w-full font-semibold group">
                       Learn More
                       <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
                     </Button>
@@ -179,18 +179,18 @@ export default function ServicesPage() {
             viewport={{ once: true }}
             className="text-center max-w-4xl mx-auto"
           >
-            <h2 className="text-4xl font-bold text-tobacco-brown mb-6">Ready to Get Started?</h2>
-            <p className="text-xl text-natural-gray mb-8">
+            <h2 className="text-4xl font-bold text-[#004E8F] mb-6">Ready to Get Started?</h2>
+            <p className="text-xl text-[#004E8F]/70 mb-8">
               Contact us today for a free consultation and discover how we can help transform your business.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-tobacco-brown hover:bg-zorba button-hover">
+              <Button size="lg" className="btn btn-primary font-semibold">
                 Schedule Consultation
               </Button>
               <Button
                 size="lg"
                 variant="outline"
-                className="border-tobacco-brown text-tobacco-brown hover:bg-tobacco-brown hover:text-white bg-transparent button-hover"
+                className="btn btn-outline font-semibold"
               >
                 Request Quote
               </Button>

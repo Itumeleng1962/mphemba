@@ -46,7 +46,7 @@ export default function AboutPage() {
   ]
 
   return (
-    <main className="min-h-screen bg-[#FAF7F5] pt-24">
+    <main className="min-h-screen bg-white pt-24">
       {/* Hero Section */}
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0">
@@ -55,8 +55,8 @@ export default function AboutPage() {
             alt="Our professional team"
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#8B6D5C]/90 to-[#8B6D5C]/60"></div>
-          <div className="absolute inset-0 bg-gradient-to-t from-[#8B6D5C]/80 via-transparent to-transparent"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-[#F7941E]/90 via-[#004E8F]/80 to-[#004E8F]/60"></div>
+          <div className="absolute inset-0 bg-gradient-to-t from-[#004E8F]/80 via-transparent to-transparent"></div>
         </div>
         <div className="container mx-auto px-4 relative z-10">
           <motion.div
@@ -87,11 +87,11 @@ export default function AboutPage() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
               >
-                <Card className="p-6 text-center bg-white border border-[#E5DCD3] hover:border-[#8B6D5C] transition-all duration-300 hover:shadow-xl group">
-                  <div className="text-4xl font-bold text-[#8B6D5C] mb-2 group-hover:scale-110 transition-transform duration-300">
+                <Card className="p-6 text-center bg-white border border-[#F7941E]/20 hover:border-[#004E8F] transition-all duration-300 hover:shadow-xl group backdrop-blur-sm">
+                  <div className="text-4xl font-bold text-[#004E8F] mb-2 group-hover:text-[#F7941E] group-hover:scale-110 transition-all duration-300">
                     {stat.value}
                   </div>
-                  <div className="text-[#5C4B42]">{stat.label}</div>
+                  <div className="text-[#004E8F]/70">{stat.label}</div>
                 </Card>
               </motion.div>
             ))}
@@ -109,8 +109,8 @@ export default function AboutPage() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold text-[#8B6D5C] mb-4">Our Core Values</h2>
-            <p className="text-lg text-[#5C4B42] max-w-3xl mx-auto">
+            <h2 className="text-4xl font-bold text-[#004E8F] mb-4">Our Core Values</h2>
+            <p className="text-lg text-[#F7941E] max-w-3xl mx-auto">
               These principles guide our work and shape our relationships with clients
             </p>
           </motion.div>
@@ -124,14 +124,14 @@ export default function AboutPage() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
               >
-                <Card className="p-6 bg-white border border-[#E5DCD3] hover:border-[#8B6D5C] transition-all duration-300 hover:shadow-xl group">
-                  <div className="w-12 h-12 bg-[#8B6D5C] rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                <Card className="p-6 bg-white border border-[#F7941E]/20 hover:border-[#004E8F] transition-all duration-300 hover:shadow-xl group backdrop-blur-sm">
+                  <div className="w-12 h-12 bg-gradient-to-br from-[#F7941E] to-[#004E8F] rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
                     <value.icon className="h-6 w-6 text-white" />
                   </div>
-                  <h3 className="text-xl font-semibold text-[#8B6D5C] mb-3 group-hover:translate-x-1 transition-transform duration-300">
+                  <h3 className="text-xl font-semibold text-[#004E8F] mb-3 group-hover:text-[#F7941E] group-hover:translate-x-1 transition-all duration-300">
                     {value.title}
                   </h3>
-                  <p className="text-[#5C4B42] leading-relaxed">
+                  <p className="text-[#004E8F]/70 leading-relaxed">
                     {value.description}
                   </p>
                 </Card>
@@ -152,8 +152,8 @@ export default function AboutPage() {
               viewport={{ once: true }}
               className="space-y-6"
             >
-              <h2 className="text-4xl font-bold text-[#8B6D5C]">Our Story</h2>
-              <div className="space-y-4 text-[#5C4B42] leading-relaxed">
+              <h2 className="text-4xl font-bold text-[#004E8F]">Our Story</h2>
+              <div className="space-y-4 text-[#004E8F]/70 leading-relaxed">
                 <p>
                   Founded with a vision to transform the financial services landscape in South Africa, Mphemba Ziyanda Solutions has grown to become a trusted partner for businesses seeking comprehensive financial and advisory services.
                 </p>
@@ -168,16 +168,16 @@ export default function AboutPage() {
                 {achievements.map((achievement, index) => (
                   <div 
                     key={index}
-                    className="flex items-center space-x-2 text-[#5C4B42]"
+                    className="flex items-center space-x-2 text-[#004E8F]/70 group"
                   >
-                    <CheckCircle className="h-5 w-5 text-[#8B6D5C] flex-shrink-0" />
+                    <CheckCircle className="h-5 w-5 text-[#F7941E] flex-shrink-0 group-hover:scale-110 transition-transform" />
                     <span>{achievement}</span>
                   </div>
                 ))}
               </div>
-              <Button 
-                className="bg-[#8B6D5C] text-white hover:bg-[#A89386] transition-all duration-300 transform hover:scale-105 active:scale-95 shadow-md hover:shadow-lg"
-              >
+                              <Button
+                  className="btn btn-primary font-semibold"
+                >
                 Learn More
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
@@ -196,13 +196,13 @@ export default function AboutPage() {
                   alt="Our team at work"
                   className="w-full h-[600px] object-cover"
                 />
-                <div className="absolute inset-0 bg-gradient-to-tr from-[#8B6D5C]/20 to-transparent"></div>
+                <div className="absolute inset-0 bg-gradient-to-tr from-[#F7941E]/20 via-[#004E8F]/20 to-transparent"></div>
               </div>
               <div className="absolute -bottom-6 -left-6">
-                <Card className="p-6 bg-white shadow-xl">
+                <Card className="p-6 bg-white shadow-xl group hover:shadow-2xl transition-shadow">
                   <div className="flex items-center space-x-2">
-                    <Star className="h-6 w-6 text-[#8B6D5C]" />
-                    <div className="text-[#8B6D5C] font-bold">Trusted by 500+ Clients</div>
+                    <Star className="h-6 w-6 text-[#F7941E] group-hover:scale-110 transition-transform" />
+                    <div className="text-[#004E8F] font-bold group-hover:text-[#F7941E] transition-colors">Trusted by 500+ Clients</div>
                   </div>
                 </Card>
               </div>

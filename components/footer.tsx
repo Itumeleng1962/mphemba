@@ -36,7 +36,7 @@ export function Footer() {
   ]
 
   return (
-    <footer className="bg-[#2C1810] text-white">
+    <footer className="bg-gradient-to-br from-[#F7941E] to-[#004E8F] text-white">
       <div className="container mx-auto px-4">
         {/* Newsletter Section */}
         <div className="py-16 border-b border-white/10">
@@ -59,7 +59,7 @@ export function Footer() {
                   className="bg-white/10 border-white/20 text-white placeholder:text-white/50 focus:border-white"
                 />
                 <Button 
-                  className="bg-white text-[#2C1810] hover:bg-[#F8F5F3] transition-all duration-300 transform hover:scale-105 active:scale-95 whitespace-nowrap"
+                  className="bg-white text-[#F7941E] hover:text-[#004E8F] transition-all duration-300 transform hover:scale-105 active:scale-95 whitespace-nowrap"
                 >
                   Subscribe
                   <ArrowRight className="ml-2 h-4 w-4" />
@@ -84,7 +84,7 @@ export function Footer() {
                 <a
                   key={index}
                   href="#"
-                  className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-colors duration-300"
+                  className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-all duration-300 hover:scale-110"
                 >
                   <Icon className="h-5 w-5" />
                 </a>
@@ -100,8 +100,9 @@ export function Footer() {
                 <li key={link.href}>
                   <Link 
                     href={link.href}
-                    className="text-white/80 hover:text-white transition-colors duration-300 hover:translate-x-1 inline-block"
+                    className="text-white/80 hover:text-white transition-all duration-300 hover:translate-x-2 inline-flex items-center group"
                   >
+                    <ArrowRight className="h-4 w-4 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
                     {link.title}
                   </Link>
                 </li>
@@ -117,8 +118,9 @@ export function Footer() {
                 <li key={index}>
                   <a 
                     href="#" 
-                    className="text-white/80 hover:text-white transition-colors duration-300 hover:translate-x-1 inline-block"
+                    className="text-white/80 hover:text-white transition-all duration-300 hover:translate-x-2 inline-flex items-center group"
                   >
+                    <ArrowRight className="h-4 w-4 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
                     {service}
                   </a>
                 </li>
@@ -131,7 +133,7 @@ export function Footer() {
             <h4 className="text-lg font-semibold mb-6">Contact Us</h4>
             <ul className="space-y-4">
               <li className="flex items-start space-x-3">
-                <MapPin className="h-5 w-5 text-white/80 mt-1" />
+                <MapPin className="h-5 w-5 text-white mt-1 group-hover:scale-110 transition-transform" />
                 <span className="text-white/80">
                   123 Business Street
                   <br />
@@ -141,11 +143,11 @@ export function Footer() {
                 </span>
               </li>
               <li className="flex items-center space-x-3">
-                <Phone className="h-5 w-5 text-white/80" />
+                <Phone className="h-5 w-5 text-white group-hover:scale-110 transition-transform" />
                 <span className="text-white/80">+27 11 123 4567</span>
               </li>
               <li className="flex items-center space-x-3">
-                <Mail className="h-5 w-5 text-white/80" />
+                <Mail className="h-5 w-5 text-white group-hover:scale-110 transition-transform" />
                 <span className="text-white/80">info@mphembaziyanda.com</span>
               </li>
             </ul>

@@ -74,7 +74,7 @@ export default function IndustriesPage() {
   return (
     <div className="pt-20">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-tobacco-brown via-zorba to-natural-gray text-white py-20">
+      <section className="bg-gradient-to-br from-[#F7941E] to-[#004E8F] text-white py-20">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -92,7 +92,7 @@ export default function IndustriesPage() {
       </section>
 
       {/* Industries Grid */}
-      <section className="py-20 bg-pampas">
+      <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12">
             {industries.map((industry, index) => (
@@ -103,7 +103,7 @@ export default function IndustriesPage() {
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
               >
-                <Card className="h-full card-hover overflow-hidden bg-white border-0 shadow-lg">
+                <Card className="h-full card-hover overflow-hidden bg-white border border-[#F7941E]/20 hover:border-[#004E8F] transition-all duration-300 hover:shadow-xl backdrop-blur-sm">
                   <div className="relative h-48 overflow-hidden">
                     <img
                       src={industry.image || "/placeholder.svg"}
@@ -111,32 +111,32 @@ export default function IndustriesPage() {
                       className="w-full h-full object-cover image-hover"
                     />
                     <div className="absolute top-4 left-4">
-                      <div className="w-12 h-12 bg-white/90 backdrop-blur-sm rounded-lg flex items-center justify-center">
-                        <industry.icon className="h-6 w-6 text-tobacco-brown" />
+                      <div className="w-12 h-12 bg-gradient-to-br from-[#F7941E] to-[#004E8F] rounded-lg flex items-center justify-center">
+                        <industry.icon className="h-6 w-6 text-white" />
                       </div>
                     </div>
                   </div>
                   <CardHeader>
-                    <CardTitle className="text-xl mb-2 text-tobacco-brown">{industry.title}</CardTitle>
-                    <CardDescription className="text-natural-gray">{industry.description}</CardDescription>
+                    <CardTitle className="text-xl mb-2 text-[#004E8F] group-hover:text-[#F7941E] transition-colors duration-300">{industry.title}</CardTitle>
+                    <CardDescription className="text-[#004E8F]/70">{industry.description}</CardDescription>
                   </CardHeader>
                   <CardContent className="space-y-4">
                     <div>
-                      <h4 className="font-semibold text-tobacco-brown mb-2">Specialized Services:</h4>
+                      <h4 className="font-semibold text-[#004E8F] mb-2">Specialized Services:</h4>
                       <div className="grid grid-cols-2 gap-2">
                         {industry.services.map((service, serviceIndex) => (
-                          <div key={serviceIndex} className="text-sm text-natural-gray flex items-center">
-                            <div className="w-1.5 h-1.5 bg-tobacco-brown rounded-full mr-2"></div>
+                          <div key={serviceIndex} className="text-sm text-[#004E8F]/70 flex items-center">
+                            <div className="w-1.5 h-1.5 bg-[#F7941E] rounded-full mr-2"></div>
                             {service}
                           </div>
                         ))}
                       </div>
                     </div>
-                    <div className="bg-tobacco-brown/10 p-4 rounded-lg">
-                      <h4 className="font-semibold text-tobacco-brown mb-1">Success Story:</h4>
-                      <p className="text-sm text-natural-gray">{industry.caseStudy}</p>
+                    <div className="bg-[#F7941E]/10 p-4 rounded-lg">
+                      <h4 className="font-semibold text-[#F7941E] mb-1">Success Story:</h4>
+                      <p className="text-sm text-[#004E8F]/70">{industry.caseStudy}</p>
                     </div>
-                    <Button className="w-full bg-tobacco-brown hover:bg-zorba button-hover group text-white">
+                    <Button className="btn btn-primary w-full font-semibold group">
                       Learn More
                       <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
                     </Button>
@@ -158,8 +158,8 @@ export default function IndustriesPage() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold text-tobacco-brown mb-4">Our Industry Impact</h2>
-            <p className="text-xl text-natural-gray max-w-3xl mx-auto">
+            <h2 className="text-4xl font-bold text-[#004E8F] mb-4">Our Industry Impact</h2>
+            <p className="text-xl text-[#004E8F]/70 max-w-3xl mx-auto">
               Numbers that showcase our commitment to excellence across all industries.
             </p>
           </motion.div>
@@ -179,7 +179,7 @@ export default function IndustriesPage() {
                 viewport={{ once: true }}
                 className="text-center"
               >
-                <div className="bg-gradient-to-br from-tobacco-brown to-zorba text-white rounded-2xl p-8 card-hover">
+                <div className="bg-gradient-to-br from-[#F7941E] to-[#004E8F] text-white rounded-2xl p-8 card-hover">
                   <div className="text-4xl font-bold mb-2">{stat.value}</div>
                   <div className="text-white/90 font-medium mb-1">{stat.label}</div>
                   <div className="text-sm text-white/70">{stat.description}</div>

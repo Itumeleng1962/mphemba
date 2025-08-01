@@ -30,7 +30,7 @@ export function TestimonialsSection() {
   ]
 
   return (
-    <section className="py-20 bg-[#F8F5F3]">
+    <section className="py-20 bg-white">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -39,8 +39,8 @@ export function TestimonialsSection() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl font-bold text-[#2C1810] mb-4">What Our Clients Say</h2>
-          <p className="text-lg text-[#4A3427] max-w-3xl mx-auto">
+          <h2 className="text-4xl font-bold text-[#004E8F] mb-4">What Our Clients Say</h2>
+          <p className="text-lg text-[#F7941E] max-w-3xl mx-auto">
             Don't just take our word for it - hear from some of our valued clients about their experience working with us
           </p>
         </motion.div>
@@ -54,12 +54,12 @@ export function TestimonialsSection() {
               transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true }}
             >
-              <Card className="p-6 h-full bg-white border border-[#E5DCD3] hover:border-[#2C1810] transition-all duration-300 hover:shadow-xl group">
+              <Card className="p-6 h-full bg-white border border-[#F7941E]/20 hover:border-[#004E8F] transition-all duration-300 hover:shadow-xl group backdrop-blur-sm">
                 <div className="flex flex-col h-full">
                   <div className="mb-6">
-                    <Quote className="h-8 w-8 text-[#2C1810] group-hover:scale-110 transition-transform duration-300" />
+                    <Quote className="h-8 w-8 text-[#F7941E] group-hover:scale-110 transition-transform duration-300" />
                   </div>
-                  <p className="text-[#4A3427] leading-relaxed mb-6 flex-grow">
+                  <p className="text-[#004E8F]/70 leading-relaxed mb-6 flex-grow">
                     "{testimonial.quote}"
                   </p>
                   <div className="flex items-center space-x-4">
@@ -71,8 +71,8 @@ export function TestimonialsSection() {
                       />
                     </div>
                     <div>
-                      <div className="font-semibold text-[#2C1810]">{testimonial.author}</div>
-                      <div className="text-sm text-[#4A3427]">
+                      <div className="font-semibold text-[#004E8F] group-hover:text-[#F7941E] transition-colors duration-300">{testimonial.author}</div>
+                      <div className="text-sm text-[#004E8F]/70">
                         {testimonial.position}, {testimonial.company}
                       </div>
                     </div>
@@ -84,8 +84,8 @@ export function TestimonialsSection() {
         </div>
 
         {/* Background Decorative Elements */}
-        <div className="absolute top-0 right-0 -mr-20 -mt-20 w-64 h-64 bg-gradient-to-br from-[#2C1810]/10 to-transparent rounded-full blur-3xl"></div>
-        <div className="absolute bottom-0 left-0 -ml-20 -mb-20 w-64 h-64 bg-gradient-to-tr from-[#2C1810]/10 to-transparent rounded-full blur-3xl"></div>
+        <div className="absolute top-0 right-0 -mr-20 -mt-20 w-64 h-64 bg-gradient-to-br from-[#F7941E]/10 to-[#004E8F]/10 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 left-0 -ml-20 -mb-20 w-64 h-64 bg-gradient-to-tr from-[#004E8F]/10 to-[#F7941E]/10 rounded-full blur-3xl"></div>
       </div>
     </section>
   )

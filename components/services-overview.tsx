@@ -62,7 +62,7 @@ export function ServicesOverview() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="text-4xl font-bold text-[#2C1810] mb-4"
+            className="text-4xl font-bold text-[#004E8F] mb-4"
           >
             Our Services
           </motion.h2>
@@ -71,7 +71,7 @@ export function ServicesOverview() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: true }}
-            className="text-xl text-[#4A3427] max-w-3xl mx-auto"
+            className="text-xl text-[#F7941E] max-w-3xl mx-auto"
           >
             Comprehensive financial solutions tailored to your business needs
           </motion.p>
@@ -86,27 +86,27 @@ export function ServicesOverview() {
               transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true }}
             >
-              <Card className="h-full bg-white border border-[#E5DCD3] hover:border-[#2C1810] transition-all duration-300 hover:shadow-xl group">
+              <Card className="h-full bg-white border border-[#F7941E]/20 hover:border-[#004E8F] transition-all duration-300 hover:shadow-xl group backdrop-blur-sm">
                 <CardContent className="p-6 space-y-4">
-                  <div className="w-12 h-12 bg-[#2C1810] rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                  <div className="w-12 h-12 bg-gradient-to-br from-[#F7941E] to-[#004E8F] rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                     <service.icon className="h-6 w-6 text-white" />
                   </div>
-                  <h3 className="text-xl font-semibold text-[#2C1810] group-hover:translate-x-1 transition-transform duration-300">
+                  <h3 className="text-xl font-semibold text-[#004E8F] group-hover:text-[#F7941E] transition-all duration-300">
                     {service.title}
                   </h3>
-                  <p className="text-[#4A3427] leading-relaxed">
+                  <p className="text-[#004E8F]/70 leading-relaxed">
                     {service.description}
                   </p>
                   <ul className="space-y-2">
                     {service.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-[#4A3427]">
-                        <ArrowRight className="h-4 w-4 mr-2 text-[#2C1810]" />
+                      <li key={featureIndex} className="flex items-center text-[#004E8F]/70">
+                        <ArrowRight className="h-4 w-4 mr-2 text-[#F7941E]" />
                         {feature}
                       </li>
                     ))}
                   </ul>
-                  <Button 
-                    className="w-full mt-4 bg-[#2C1810] text-white hover:bg-[#4A3427] transition-all duration-300 transform hover:scale-105 active:scale-95 shadow-md hover:shadow-lg"
+                                    <Button
+                    className="btn btn-primary w-full mt-4 font-semibold"
                   >
                     Learn More
                     <ArrowRight className="ml-2 h-4 w-4" />
